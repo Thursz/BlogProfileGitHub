@@ -9,7 +9,7 @@ interface UserProps {
   name: string;
   bio: string;
   login: string;
-  company: string;
+  location: string;
   followers: number;
 }
 
@@ -44,16 +44,16 @@ export function Summary() {
             <ArrowUpRight size={12} />
           </a>
         </SummaryHeader>
-        <p>{user?.login}</p>
+        <p>{user?.bio}</p>
         <SummaryAnchors>
           <div>
             <GithubLogo size={18} />
-            <span>{user?.bio}</span>
+            <span>{user?.login}</span>
           </div>
 
           <div>
             <Buildings size={18} />
-            <span>{user?.company}</span>
+            <span>{user?.location}</span>
           </div>
 
           <div>
